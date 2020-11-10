@@ -25,6 +25,20 @@ input.onGesture(Gesture.Shake, function () {
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         basic.showLeds(`
+            . . . . .
+            . . . . #
+            . . . # #
+            . . . . #
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # . .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
             . . # . .
             . # . . .
             # # # # #
@@ -36,6 +50,20 @@ basic.forever(function () {
     basic.clearScreen()
     if (input.buttonIsPressed(Button.B)) {
         basic.showLeds(`
+            . . . . .
+            # . . . .
+            # # . . .
+            # . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . . # # .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
             . . # . .
             . . . # .
             # # # # #
@@ -46,6 +74,20 @@ basic.forever(function () {
     }
     basic.clearScreen()
     if (input.buttonIsPressed(Button.A) && input.buttonIsPressed(Button.B)) {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
         basic.showLeds(`
             . # # # .
             # # # # #
