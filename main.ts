@@ -23,57 +23,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
 })
 basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
-        basic.showLeds(`
-            . . . . .
-            . . . . #
-            . . . # #
-            . . . . #
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . # # . .
-            . . # . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . # . . .
-            # # # # #
-            . # . . .
-            . . # . .
-            `)
-        basic.pause(1000)
-    }
-    basic.clearScreen()
-    if (input.buttonIsPressed(Button.B)) {
-        basic.showLeds(`
-            . . . . .
-            # . . . .
-            # # . . .
-            # . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . . # # .
-            . . # . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . . . # .
-            # # # # #
-            . . . # .
-            . . # . .
-            `)
-        basic.pause(1000)
-    }
-    basic.clearScreen()
-    if (input.buttonIsPressed(Button.A) && input.buttonIsPressed(Button.B)) {
+    if (input.buttonIsPressed(Button.AB)) {
         basic.showLeds(`
             . . . . .
             . . # . .
@@ -98,4 +48,55 @@ basic.forever(function () {
         basic.pause(1000)
         basic.clearScreen()
     }
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showLeds(`
+            . . . . .
+            . . . . #
+            . . . # #
+            . . . . #
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # . .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
+        basic.pause(1000)
+    } else {
+        if (input.buttonIsPressed(Button.B)) {
+            basic.showLeds(`
+                . . . . .
+                # . . . .
+                # # . . .
+                # . . . .
+                . . . . .
+                `)
+            basic.showLeds(`
+                . . . . .
+                . . # . .
+                . . # # .
+                . . # . .
+                . . . . .
+                `)
+            basic.showLeds(`
+                . . # . .
+                . . . # .
+                # # # # #
+                . . . # .
+                . . # . .
+                `)
+            basic.pause(1000)
+        }
+        basic.clearScreen()
+    }
+    basic.clearScreen()
 })
